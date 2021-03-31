@@ -85,8 +85,8 @@ function showModal()
 {
 	const button = document.querySelectorAll('.action .buy')
 	const modal = document.querySelector('.modal')
-	const overlay = modal.querySelector('.overlay')
-	const closed = document.querySelector('.modal-product .modal-container .close')
+	const overlay = document.querySelectorAll('.overlay')
+	const closed = document.querySelectorAll('.modal-product .modal-container .close')
 	console.log(closed)
 	button.forEach((e, index) =>
 	{
@@ -98,13 +98,16 @@ function showModal()
 		})
 	})
 
-	overlay.addEventListener('click', () =>
+	overlay.forEach((element)=> {
+		element.addEventListener('click', ()=> {
+			close()
+		})
+	})
+	closed.forEach((closed) => {
+		closed.addEventListener('click', () =>
 	{
 		close()
 	})
-	closed.addEventListener('click', () =>
-	{
-		close()
 	})
 	window.addEventListener('keyup', (e) =>
 	{
@@ -229,6 +232,26 @@ $(document).ready(function() {
 	})
 
 })
+function User() {
+	const buttons = document.querySelectorAll('.user .user-nav p')
+	const content = document.querySelectorAll('.user-items')
+	buttons.forEach(button => {
+		button.addEventListener('click', ()=> {
+			let attr = button.getAttribute('data-toggle')
+			document.querySelector(`#${attr}`).classList.add('active')
+			button.classList.add('active')
+			buttons.forEach((e) => {
+				e.classList.remove('active')
+			})
+			content.forEach((es) => {
+				es.classList.remove('active')
+			})
+			button.classList.add('active')
+			document.querySelector(`#${attr}`).classList.add('active')
+		})
+	})
+}
+User()
 //=========================================\\
 //=================carousel=================\\
 //===========================================\\
