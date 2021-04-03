@@ -2,7 +2,9 @@
 
 $(document).ready(function ()
 {
-	AOS.init();
+	AOS.init({
+		duration: 1200,
+	});
 })
 //=================Replace To SVG=================\\
 
@@ -252,6 +254,21 @@ function User() {
 	})
 }
 User()
+
+
+
+// select 
+$(document).ready(function() {
+	$('.filter-select .select-box .default').on('click', function() {
+		$(this).next().slideToggle(250)
+	})
+	$('.filter-select .select-box ul li').on('click', function() {
+		$(this).parent().slideUp(250)
+		$('.filter-select .select-box .default span').html($(this).text())
+	})
+})
+
+
 //=========================================\\
 //=================carousel=================\\
 //===========================================\\

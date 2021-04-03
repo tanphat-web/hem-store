@@ -404,6 +404,9 @@ h2.heading {
 				cursor: pointer;
 				margin-right: 20px;
 				border-bottom: 2px solid transparent;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
 				user-select: none;
 				line-height: 26px;
 				@include mobile {
@@ -575,6 +578,142 @@ h2.heading {
 					margin-right: 5px;
 					path {
 						fill: $white-cl;
+					}
+				}
+			}
+		}
+	}
+}
+.breadcrumb-section {
+	padding: 20px 0;
+	ul {
+		display: flex;
+		align-items: center;
+		li {
+			font-size: 13px;
+			color: #777;
+
+			&:not(:first-child) {
+				border-left: 1px solid #777;
+				padding-left: 12px;
+			}
+			a {
+				display: flex;
+				align-items: center;
+				padding-right: 12px;
+				img {
+					width: 11px;
+					height: auto;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}
+.filter {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	&-category {
+		display: flex;
+		align-items: center;
+		max-width: 55%;
+		flex-basis: 55%;
+		position: relative;
+		@include maxW(1200px) {
+			max-width: 65%;
+			flex-basis: 65%;
+		}
+		.filter-group {
+			position: absolute;
+			top: 80%;
+			left: 40px;
+			width: 100%;
+			z-index: 21;
+			background: $white-bg-cl;
+			display: flex;
+			.filter-item {
+				max-width: 25%;
+				flex-basis: 25%;
+				.color {
+					display: flex;
+					align-items: center;
+					flex-wrap: wrap;
+					input {
+						max-width: calc(100% / 4);
+						flex-basis: calc(100% / 4);
+					}
+				}
+			}
+		}
+		p {
+			text-transform: uppercase;
+			width: 80px;
+		}
+		&__menu {
+			max-width: 90%;
+			flex-basis: 90%;
+			display: flex;
+			align-items: center;
+
+			ul {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				cursor: pointer;
+				@include tablet() {
+					display: none;
+				}
+				li {
+					display: flex;
+					align-items: center;
+					span {
+						font-family: semi;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	svg {
+		width: 13px;
+		margin-left: 3px;
+	}
+	&-select {
+		display: flex;
+		align-items: center;
+		p {
+			font-family: semi;
+			font-size: 16px;
+			@include tablet {
+				display: none;
+			}
+		}
+		.select-box {
+			position: relative;
+			margin-left: 10px;
+			width: 150px;
+			.default {
+				user-select: none;
+			}
+			ul {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				z-index: 21;
+				background: rgb(85, 85, 85);
+				width: 100%;
+				transform: translateY(6px);
+				display: none;
+				li {
+					padding: 7px 13px;
+					color: $white-cl;
+					cursor: pointer;
+					font-size: 15px;
+					transition: $t;
+					&:hover {
+						background: #636363;
 					}
 				}
 			}
