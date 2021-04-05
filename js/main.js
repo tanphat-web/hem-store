@@ -89,7 +89,6 @@ function showModal()
 	const modal = document.querySelector('.modal')
 	const overlay = document.querySelectorAll('.overlay')
 	const closed = document.querySelectorAll('.modal-product .modal-container .close')
-	console.log(closed)
 	button.forEach((e, index) =>
 	{
 		e.addEventListener('click', (element) =>
@@ -205,9 +204,29 @@ function search() {
 	})
 }
 search()
-
-
-
+// function validationForm() {
+// 	let btn = document.querySelector('#contact-btn')
+// 	btn.addEventListener('click', () => {
+// 		if (document.querySelector('#contact-name').value == "") {
+// 			alert("Vui lòng nhập vào trường tên của bạn!")
+// 			return false;
+// 		}
+// 		if (document.querySelector('#contact-address').value == "") {
+// 			alert("Vui lòng nhập vào trường Địa chỉ của bạn!")
+// 			return false;
+// 		}
+// 		if (document.querySelector('#contact-email').value == "") {
+// 			alert("Vui lòng nhập vào trường email của bạn!")
+// 			return false;
+// 		}
+// 		if (document.querySelector('#contact-phone').value == "") {
+// 			alert("Vui lòng nhập vào trường số điện thoại của bạn!")
+// 			return false;
+// 		}
+// 		return true;
+// 	})
+// }
+// validationForm()
 // modal product 
 $(document).ready(function() {
 	console.log('asd')
@@ -216,8 +235,6 @@ $(document).ready(function() {
 		$(this).toggleClass('active');
 		$('.modal-product .modal-container .accordion .accordion-items .title').not($(this)).removeClass('active')
 	})
-
-
 	$('.add-to-cart').on('click', function() {
 		$('.cart-section').addClass('active')
 	})
@@ -254,7 +271,6 @@ function User() {
 	})
 }
 User()
-
 
 
 // select 
