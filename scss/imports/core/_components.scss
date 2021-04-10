@@ -311,60 +311,7 @@ h2.heading {
 						cursor: pointer;
 					}
 				}
-				.accordion {
-					.accordion-items {
-						border-bottom: 1px dotted #a5a3a3;
-						margin: 10px 0;
-						.title {
-							@include betweenFlex();
-							cursor: pointer;
-							&.active {
-								.see {
-									&::after {
-										opacity: 0;
-									}
-								}
-							}
-							.see {
-								display: block;
-								width: 16px;
-								height: 2px;
-								background: $black-bg-cl;
-								position: relative;
-								&::after {
-									content: "";
-									position: absolute;
-									top: -15px;
-									left: 50%;
-									transform: translate(-50%, 50%);
-									height: 16px;
-									width: 2px;
-									display: block;
-									background: $black-bg-cl;
-									transition: $t;
-								}
-							}
-						}
-						.content {
-							padding: 2px 0 5px 0;
-							display: none;
-							p {
-								font-family: regular;
-								font-size: 13px;
-							}
-							ul {
-								li {
-									font-size: 13px;
-									font-family: regular;
-									line-height: 1.85;
-									p {
-										font-size: 15px;
-									}
-								}
-							}
-						}
-					}
-				}
+
 				.details {
 					text-align: center;
 					padding-top: 10px;
@@ -378,6 +325,60 @@ h2.heading {
 		.close {
 			top: 10px;
 			right: 10px;
+		}
+	}
+}
+.accordion {
+	.accordion-items {
+		border-bottom: 1px dotted #a5a3a3;
+		margin: 10px 0;
+		.title {
+			@include betweenFlex();
+			cursor: pointer;
+			&.active {
+				.see {
+					&::after {
+						opacity: 0;
+					}
+				}
+			}
+			.see {
+				display: block;
+				width: 16px;
+				height: 2px;
+				background: $black-bg-cl;
+				position: relative;
+				&::after {
+					content: "";
+					position: absolute;
+					top: -15px;
+					left: 50%;
+					transform: translate(-50%, 50%);
+					height: 16px;
+					width: 2px;
+					display: block;
+					background: $black-bg-cl;
+					transition: $t;
+				}
+			}
+		}
+		.content {
+			padding: 2px 0 5px 0;
+			display: none;
+			p {
+				font-family: regular;
+				font-size: 13px;
+			}
+			ul {
+				li {
+					font-size: 13px;
+					font-family: regular;
+					line-height: 1.85;
+					p {
+						font-size: 15px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -776,6 +777,58 @@ h2.heading {
 				&.current {
 					background: $black-bg-cl;
 					color: $white-cl;
+				}
+			}
+		}
+	}
+}
+.quantity {
+	margin: 10px 0 20px 0;
+	display: flex;
+	align-items: center;
+	button {
+		outline: none;
+		border: 1px solid #cacaca;
+		cursor: pointer;
+		width: 45px;
+		height: 35px;
+		font-size: 20px;
+		&:hover {
+			background: $btn-hover;
+		}
+	}
+	span {
+		border-top: 1px solid #cacaca;
+		border-bottom: 1px solid #cacaca;
+		height: 35px;
+		display: block;
+		font-size: 20px;
+		line-height: 35px;
+		width: 60px;
+		text-align: center;
+		user-select: none;
+	}
+}
+.policy {
+	margin-top: 20px;
+	ul {
+		li {
+			display: flex;
+			align-items: center;
+			margin-bottom: 18px;
+			img {
+				width: 30px;
+				margin: 0;
+			}
+			p {
+				text-transform: uppercase;
+				margin-left: 8px;
+				line-height: 1.5;
+				font-family: semi;
+				span {
+					text-transform: initial;
+					display: block;
+					font-family: m;
 				}
 			}
 		}

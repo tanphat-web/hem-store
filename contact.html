@@ -92,24 +92,24 @@
 											<li><a href="coat.html">Áo Khoác</a></li>
 										</ul>
 										<div class="sub-menu__img">
-											<a href="#" class="img">
+											<a href="product-details.html" class="img">
 												<img src="img/img_8402_thumb.jpg" alt="">
 												<p class="sub-img">
 													Sơ mi nam STS ngắn tay SASM48
 												</p>
 											</a href="#">
-											<a href="#" class="img">
+											<a href="product-details.html" class="img">
 												<img src="img/img_7818_thumb.jpg" alt="">
 												<p class="sub-img">
 													Sơ mi nam STS cotton sọc lớn SASM47
 												</p>
-											</a href="#">
-											<a href="#" class="img">
+											</a >
+											<a href="product-details.html" class="img">
 												<img src="img/IMG_7524_thumb.jfif" alt="">
 												<p class="sub-img">
 													Sơ mi nam STS cotton sọc nhỏ SASM46
 												</p>
-											</a href="#">
+											</a>
 										</div>
 									</div>
 								</a>
@@ -126,24 +126,24 @@
 											<li><a href="quan-lot.html">Quần Lót Nam</a></li>
 										</ul>
 										<div class="sub-menu__img">
-											<a href="#" class="img">
+											<a href="product-details.html" class="img">
 												<img src="img/img_6609_thumb.jpg" alt="">
 												<p class="sub-img">
 													Quần short STS slimfit SAQS29
 												</p>
 											</a href="#">
-											<a href="#" class="img">
+											<a href="product-details.html" class="img">
 												<img src="img/img_6423_thumb.jpg" alt="">
 												<p class="sub-img">
 													Quần short STS kaki SAQS28
 												</p>
-											</a href="#">
-											<a href="#" class="img">
+											</a>
+											<a href="product-details.html" class="img">
 												<img src="img/untitled_102_thumb.jpg" alt="">
 												<p class="sub-img">
 													Quần tây nam STS SAQT08
 												</p>
-											</a href="#">
+											</a >
 										</div>
 									</div>
 								</a>
@@ -158,24 +158,24 @@
 											<li><a href="non.html">Nón Mũ</a></li>
 										</ul>
 										<div class="sub-menu__img">
-											<a href="#" class="img">
+											<a href="product-details.html" class="img">
 												<img src="img/img_4097_copy_thumb.jpg" alt="">
 												<p class="sub-img">
 													Mũ lưỡi trai vải nhung MU01
 												</p>
-											</a href="#">
-											<a href="#" class="img">
+											</a >
+											<a href="product-details.html" class="img">
 												<img src="img/photo6257934382006381290_thumb.jpg" alt="">
 												<p class="sub-img">
 													Tất nam ZR pack TAT122002
 												</p>
-											</a href="#">
-											<a href="#" class="img">
+											</a>
+											<a href="product-details.html" class="img">
 												<img src="img/photo6219665179721968654_thumb.jpg" alt="">
 												<p class="sub-img">
 													Tất nam HM TAT122001
 												</p>
-											</a href="#">
+											</a >
 										</div>
 									</div>
 								</a>
@@ -675,6 +675,32 @@
 	<!-- javascript -->
 	<script type="text/javascript" src="dest/jsmain.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		function validationForm() {
+	let btn = document.querySelector('.contact #contact-btn');
+	btn.addEventListener('click', () => {
+		if (document.querySelector('#contact-name').value == "") {
+			alert("Vui lòng nhập vào trường tên của bạn!")
+			return false;
+		}
+		if (document.querySelector('#contact-address').value == "") {
+			alert("Vui lòng nhập vào trường Địa chỉ của bạn!")
+			return false;
+		}
+		if (document.querySelector('#contact-email').value == "") {
+			alert("Vui lòng nhập vào trường email của bạn!")
+			return false;
+		}
+		if (document.querySelector('#contact-phone').value == "") {
+			alert("Vui lòng nhập vào trường số điện thoại của bạn!")
+			return false;
+		}
+		return true;
+	})
+}
+validationForm()
+
+	</script>
 </body>
 
 </html>

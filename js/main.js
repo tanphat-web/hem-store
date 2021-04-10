@@ -22,6 +22,7 @@ $(window).on("load", function ()
 });
 
 //=================menu=================\\
+
 $(document).ready(function ()
 {
 	$('.hamburger').click(function ()
@@ -204,36 +205,14 @@ function search() {
 	})
 }
 search()
-// function validationForm() {
-// 	let btn = document.querySelector('#contact-btn')
-// 	btn.addEventListener('click', () => {
-// 		if (document.querySelector('#contact-name').value == "") {
-// 			alert("Vui lòng nhập vào trường tên của bạn!")
-// 			return false;
-// 		}
-// 		if (document.querySelector('#contact-address').value == "") {
-// 			alert("Vui lòng nhập vào trường Địa chỉ của bạn!")
-// 			return false;
-// 		}
-// 		if (document.querySelector('#contact-email').value == "") {
-// 			alert("Vui lòng nhập vào trường email của bạn!")
-// 			return false;
-// 		}
-// 		if (document.querySelector('#contact-phone').value == "") {
-// 			alert("Vui lòng nhập vào trường số điện thoại của bạn!")
-// 			return false;
-// 		}
-// 		return true;
-// 	})
-// }
-// validationForm()
+
 // modal product 
 $(document).ready(function() {
 	console.log('asd')
-	$('.modal-product .modal-container .accordion .accordion-items .title').on('click', function() {
-		$(this).next().slideToggle(300);
+	$('.accordion .accordion-items .title').on('click', function() {
+		$(this).next().slideToggle(250);
 		$(this).toggleClass('active');
-		$('.modal-product .modal-container .accordion .accordion-items .title').not($(this)).removeClass('active')
+		$(' .accordion .accordion-items .title').not($(this)).removeClass('active')
 	})
 	$('.add-to-cart').on('click', function() {
 		$('.cart-section').addClass('active')
@@ -376,3 +355,37 @@ $(document).ready(function ()
 		$carousel.flickity( 'select', index );
 	});
 })
+$(document).ready(function ()
+{
+	let $carousel = $('.img-carousel');
+	$carousel.flickity({
+		// options
+		cellAlign: 'left',
+		contain: false,
+		pageDots: false,
+		prevNextButtons: true,
+		wrapAround: true,
+		fullscreen: true,
+		autoPlay: false
+	});
+})
+
+function quantity() {
+	let total = 0;
+	document.querySelector('div.quantity button.decrease').addEventListener('click', ()=> {
+		if (total == 0 ) {
+			total  = 0 ;
+		}else {
+			total -= 1;
+		}
+		document.querySelector('#quantity').innerHTML = total;
+	})
+	document.querySelector('div.quantity button.increase').addEventListener('click', ()=> {
+		total++;
+		document.querySelector('#quantity').innerHTML = total;
+	})
+}
+quantity()
+
+
+

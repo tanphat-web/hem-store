@@ -55,13 +55,13 @@
 								</a>
 							</li>
 							<li>
-								<a href="user.html" >
+								<a href="user.html">
 									<img src="img/account.svg" alt="" class="svg">
 									<span>Tài khoản</span>
 								</a>
 							</li>
 							<li>
-								<a href="" class="cart" data-togle ="cart-section">
+								<a href="" class="cart" data-togle="cart-section">
 									<img src="img/shopping-cart.svg" alt="" class="svg">
 									<span>Giỏ hàng</span>
 								</a>
@@ -92,24 +92,24 @@
 											<li><a href="coat.html">Áo Khoác</a></li>
 										</ul>
 										<div class="sub-menu__img">
-											<a href="#" class="img">
+											<a href="product-details.html" class="img">
 												<img src="img/img_8402_thumb.jpg" alt="">
 												<p class="sub-img">
 													Sơ mi nam STS ngắn tay SASM48
 												</p>
 											</a href="#">
-											<a href="#" class="img">
+											<a href="product-details.html" class="img">
 												<img src="img/img_7818_thumb.jpg" alt="">
 												<p class="sub-img">
 													Sơ mi nam STS cotton sọc lớn SASM47
 												</p>
-											</a href="#">
-											<a href="#" class="img">
+											</a>
+											<a href="product-details.html" class="img">
 												<img src="img/IMG_7524_thumb.jfif" alt="">
 												<p class="sub-img">
 													Sơ mi nam STS cotton sọc nhỏ SASM46
 												</p>
-											</a href="#">
+											</a>
 										</div>
 									</div>
 								</a>
@@ -126,24 +126,24 @@
 											<li><a href="quan-lot.html">Quần Lót Nam</a></li>
 										</ul>
 										<div class="sub-menu__img">
-											<a href="#" class="img">
+											<a href="product-details.html" class="img">
 												<img src="img/img_6609_thumb.jpg" alt="">
 												<p class="sub-img">
 													Quần short STS slimfit SAQS29
 												</p>
 											</a href="#">
-											<a href="#" class="img">
+											<a href="product-details.html" class="img">
 												<img src="img/img_6423_thumb.jpg" alt="">
 												<p class="sub-img">
 													Quần short STS kaki SAQS28
 												</p>
-											</a href="#">
-											<a href="#" class="img">
+											</a>
+											<a href="product-details.html" class="img">
 												<img src="img/untitled_102_thumb.jpg" alt="">
 												<p class="sub-img">
 													Quần tây nam STS SAQT08
 												</p>
-											</a href="#">
+											</a>
 										</div>
 									</div>
 								</a>
@@ -158,24 +158,24 @@
 											<li><a href="non.html">Nón Mũ</a></li>
 										</ul>
 										<div class="sub-menu__img">
-											<a href="#" class="img">
+											<a href="product-details.html" class="img">
 												<img src="img/img_4097_copy_thumb.jpg" alt="">
 												<p class="sub-img">
 													Mũ lưỡi trai vải nhung MU01
 												</p>
-											</a href="#">
-											<a href="#" class="img">
+											</a>
+											<a href="product-details.html" class="img">
 												<img src="img/photo6257934382006381290_thumb.jpg" alt="">
 												<p class="sub-img">
 													Tất nam ZR pack TAT122002
 												</p>
-											</a href="#">
-											<a href="#" class="img">
+											</a>
+											<a href="product-details.html" class="img">
 												<img src="img/photo6219665179721968654_thumb.jpg" alt="">
 												<p class="sub-img">
 													Tất nam HM TAT122001
 												</p>
-											</a href="#">
+											</a>
 										</div>
 									</div>
 								</a>
@@ -313,8 +313,117 @@
 
 		</header>
 		<!-- end header -->
-		<main >
-
+		<main class ="main-cart">
+			<!-- breadcrumb -->
+			<section class="breadcrumb-section center">
+				<div class="container">
+					<ul>
+						<li><a href="index.html">
+								<img src="img/home.svg" alt="" class="svg">
+								<span>Trang Chủ</span>
+							</a></li>
+						<li>
+							Giỏ hàng
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!--end breadcrumb -->
+			<!-- cart section -->
+			<section class="cart">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7 offse-lg-1">
+							<div class="cart-heading">
+								<h2>
+									GIỎ HÀNG CỦA BẠN
+								</h2>
+								<span>
+									(Có 1 sản phẩm trong giỏ hàng)
+								</span>
+							</div>
+							<div class="cart-item">
+								<div class="cart-item__img">
+									<img src="img/product/product_thumb1-hv.jpg" alt="">
+								</div>
+								<div class="text">
+									<div class="cart-item__name">
+										<span>Polo STS slimfit SAPL49 - TRANG - S (55-60kg)</span>
+										<button>Xóa</button>
+									</div>
+									<div class="quantity">
+										<button class="decrease">-</button>
+										<span id="quantity">
+											1
+										</span>
+										<button class="increase">+</button>
+									</div>
+									<div class="price">
+										350,000₫
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 ">
+							<div class="order-summary">
+								<div class="summary">
+									<h3>
+										TÓM TẮT ĐƠN HÀNG
+									</h3>
+									<span>
+										Chưa bao gồm phí vận chuyển:
+									</span>
+									<h4 class="price">
+										<span>
+											Tổng tiền:
+										</span>
+										<span>
+											350,000₫
+										</span>
+									</h4>
+									<div class="pay">
+										<span>Bạn có thể nhập mã giảm giá ở trang thanh toán</span>
+										<a href="cart-checkout.html" class="order active">Tiến hành đặt hàng</a>
+										<a href="index.html" class="buy-more">mua thêm sản phẩm</a>
+									</div>
+								</div>
+								<div class="policy">
+									<ul>
+										<li>
+											<img src="img/img_policy_1.png" alt="" class="icon">
+											<p>
+												miễn phí giao hàng toàn quốc
+												<span>
+													(Đơn hàng từ 499.000đ)
+												</span>
+											</p>
+										</li>
+										<li>
+											<img src="img/img_policy_3.png" alt="" class="icon">
+											<p>
+												ĐỔI TRẢ DỄ DÀNG
+												<span>
+													(Đổi trả lên tới 30 ngày)
+												</span>
+											</p>
+										</li>
+										<li>
+											<img src="img/img_policy_4.png" alt="" class="icon">
+											<p>
+												TỔNG ĐÀI BÁN HÀNG  0898 209 209
+												<span>
+													(Miễn phí từ 9h00 - 22:00 mỗi ngày)
+												</span>
+											</p>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end cart section -->
 		</main>
 		<footer>
 			<section class="shop__system-section">
@@ -518,27 +627,27 @@
 
 	</div>
 	<!--end shopping cart  -->
-<!-- search mobile -->
-<!-- search mobile -->
-<div class="search-mobile">
-	<div class="search-container"> 
-		<div class="search-title">
-			<p>Tìm Kiếm</p>
-			<div class="close">
+	<!-- search mobile -->
+	<!-- search mobile -->
+	<div class="search-mobile">
+		<div class="search-container">
+			<div class="search-title">
+				<p>Tìm Kiếm</p>
+				<div class="close">
+				</div>
 			</div>
+			<form action="">
+				<div class="form-group">
+					<input type="search" placeholder="Tìm kiếm...">
+					<a href="" class="btn btn-search">
+						<img src="img/search.svg" alt="" class="svg">
+					</a>
+				</div>
+			</form>
 		</div>
-		<form action="">
-			<div class="form-group">
-				<input type="search" placeholder="Tìm kiếm...">
-				<a href="" class="btn btn-search">
-					<img src="img/search.svg" alt="" class="svg">
-				</a>
-			</div>
-		</form>
+		<div class="overlay"></div>
 	</div>
-	<div class="overlay"></div>
-</div>
-<!-- end search mobile -->
+	<!-- end search mobile -->
 	<!-- javascript -->
 	<script type="text/javascript" src="dest/jsmain.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>

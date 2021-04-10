@@ -24,12 +24,39 @@
 				&.active {
 					border-bottom: 2px solid $blue-cl;
 				}
+				&.get-pass {
+					max-width: 100%;
+					flex-basis: 100%;
+				}
 			}
 		}
 		.user-items {
 			display: none;
 			&.active {
 				display: block;
+			}
+		}
+		.get-pw {
+			padding: 25px 15px;
+			h4 {
+				font-family: semi;
+				font-size: 15px;
+				margin-bottom: 10px;
+			}
+			input,
+			button {
+				width: 100%;
+				margin: 5px 0;
+				padding: 12px 0;
+				border-radius: 10px;
+				border: 1px solid #dad7d7;
+			}
+			button {
+				text-align: center;
+				background: -webkit-linear-gradient(top, #f59000, #fd6e1d);
+				text-transform: uppercase;
+				color: $white-cl;
+				cursor: pointer;
 			}
 		}
 	}
@@ -45,7 +72,7 @@
 			}
 			button {
 				padding: 11px 20px;
-				background: $black-bg-cl;
+				background: -webkit-linear-gradient(top, #f59000, #fd6e1d);
 				border-radius: 7px;
 				color: $white-cl;
 				outline: none;
