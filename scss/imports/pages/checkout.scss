@@ -79,6 +79,7 @@
 						width: 100%;
 						height: 45px;
 						padding: 0 15px;
+						overflow: hidden;
 						&:nth-child(1) {
 							border-bottom: 1px solid #cacaca;
 						}
@@ -108,7 +109,7 @@
 							}
 							&.direct::before {
 								content: "
-Thanh toán trực tuyến (VNPAY-QR, Thẻ tín dụng, Thẻ nội địa)";
+								Thanh toán trực tuyến (VNPAY-QR, Thẻ tín dụng, Thẻ nội địa)";
 							}
 						}
 					}
@@ -225,5 +226,11 @@ Thanh toán trực tuyến (VNPAY-QR, Thẻ tín dụng, Thẻ nội địa)";
 				cursor: pointer;
 			}
 		}
+	}
+}
+option {
+	display: none;
+	&.ajax {
+		display: block;
 	}
 }

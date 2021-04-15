@@ -208,7 +208,6 @@ search()
 
 // modal product 
 $(document).ready(function() {
-	console.log('asd')
 	$('.accordion .accordion-items .title').on('click', function() {
 		$(this).next().slideToggle(250);
 		$(this).toggleClass('active');
@@ -370,22 +369,88 @@ $(document).ready(function ()
 	});
 })
 
-function quantity() {
-	let total = 0;
-	document.querySelector('div.quantity button.decrease').addEventListener('click', ()=> {
-		if (total == 0 ) {
-			total  = 0 ;
+
+$(document).ready(function() {
+	let total = 0 ;
+	$('div.quantity button.decrease').on('click', function() {
+		if (total == 0) {
+			total = 0;
 		}else {
 			total -= 1;
 		}
-		document.querySelector('#quantity').innerHTML = total;
+		$('#quantity').html(total);
 	})
-	document.querySelector('div.quantity button.increase').addEventListener('click', ()=> {
+	$('div.quantity button.increase').on('click', function() {
 		total++;
-		document.querySelector('#quantity').innerHTML = total;
+		$('#quantity').html(total);
 	})
-}
-quantity()
+})
 
+$(document).ready(function() {
+	function ValidateEmail(mail) 
+	{
+	 if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail))
+		{
+			return (true)
+		}
+			alert("Vui Lòng nhập đúng email !!")
+			return (false)
+	}
+	$('#contact-btn').on('click', function() {
+		let email = $("input[name='email']").val();
+		let name = $("input[name='name']").val();
+		let add = $("input[name='address']").val();
+		let phone = $("input[name='phone']").val();
+		let formOk = true;
+		if (name == "") {
+			formOK = false;
+		}
+		if (add == "") {
+			formOK = false;
+		}
+		if ( email == "") {
+			formOK = false;
+		}
+		if (phone == "") {
+			formOK = false;
+		}
+		if (formOK == false ) {
+			alert('Xin vui lòng nhập đầy đủ thông tin!')
+		}
+	})
+})
 
+// lấy tỉnh thành việt nam
 
+// $(document).ready(function() {
+// 	let ajax_get_regions = $.ajax({
+// 		method : 'get',
+// 		url: 'http://zuzo.xyz/api/v1/regions',
+// 		success: function (response) {
+// 			if (response.data) {
+// 				let data = response.data;
+// 				data.forEach(function(value, index) {
+// 					let html_option = '<option value="'+value.id+'" class ="ajax">'+value.name+'<option>';
+// 					$('#province').append(html_option)
+// 				})
+// 			}
+// 		}
+// 	})
+// 	$('#province').on('change', function() {
+// 		let id = $(this).val();
+// 		console.log(id);
+// 		$.ajax({
+// 			method: 'get',
+// 			url: 'http://zuzo.xyz/api/v1/regions/'+ id +'/citys' ,
+// 			success: function (response) {
+// 				if (response.data) {
+// 					let data = response.data;
+// 					data.forEach(function(value, index) {
+// 						let html_option = '<option value="'+value.id+'" class ="ajax">'+value.name+'<option>';
+// 						$('#citys').append(html_option)
+// 					})
+// 				}
+// 			}
+// 		})
+// 	})
+// })
